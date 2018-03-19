@@ -4,7 +4,7 @@ A utility library to support external applications run as Salesforce Canvas usin
 
 ## Prerequisites
 
-* >= [Node.js](https://nodejs.org/en/) 8.9.0
+* [Node.js](https://nodejs.org/en/) >= 8.9.0
 
 ## Utilities
 
