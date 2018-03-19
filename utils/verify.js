@@ -1,5 +1,4 @@
 const crypto = require('crypto');
-const session_mock = require('../__mocks__/session_mock.json');
 
 /**
  * Code adapted from @enreeco
@@ -14,10 +13,6 @@ module.exports = (signedRequest, secret) => {
   let signedRequestParts = signedRequest.split('.', 2);
   let signature = signedRequestParts[0];
   let encodedJSON = signedRequestParts[1];
-
-  if (encodedJSON === JSON.stringify(session_mock)) {
-    console.log('looks ok to me');
-  }
 
   // Deserialize the json body
   let decodedJSON = new Buffer(encodedJSON, 'base64').toString('utf8');
