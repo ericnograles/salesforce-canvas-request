@@ -2,6 +2,10 @@
 
 A utility library to support external applications run as Salesforce Canvas using a Node.js backend
 
+## Prerequisites
+
+* >= [Node.js](https://nodejs.org/en/) 8.9.0
+
 ## Utilities
 
 ### verify(signed_request: String, secret: String) : Object
