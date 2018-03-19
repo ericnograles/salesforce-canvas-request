@@ -45,12 +45,8 @@ describe('verify', () => {
   });
 
   it('should throw an error on an invalid secret', () => {
-    let badAlgorithm = Object.assign({}, session_mock, {
-      algorithm: 'we-are-not-thieves-we-swear'
-    });
-
     expect(() => {
-      let signedRequest = createMockCanvasRequest(secret, badAlgorithm);
+      let signedRequest = createMockCanvasRequest(secret, session_mock);
       let verifiedAndDecoded = verify(
         signedRequest,
         'we-are-not-thieves-we-swear'
